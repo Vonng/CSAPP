@@ -2,6 +2,8 @@
 #include <string.h>
 typedef unsigned char *byte_pointer;
 
+// Run with gcc show-bytes.c -o show-bytes && ./show-bytes
+
 /* Show bytes in hex format */
 void show_bytes(byte_pointer start, int len) {
     int i;
@@ -131,12 +133,8 @@ void exercise2_5(){
 }
 
 void exercise2_6(){
-    int x = 3490593;
+    int x = 3510593;
     float f = (float) x;
-
-    int val = 0x87654321;
-    byte_pointer valp = (byte_pointer) &val;
-
     printf("\n==============================================\n");
     printf("Exercise 2.6: Show representation of integer %d and float %f\n", x, f);
 
@@ -150,11 +148,12 @@ void exercise2_6(){
 
 
 void exercise2_7(){
-    printf("\n==============================================\n");
-    printf("Exercise 2.7: show bytes on string: \n\t`show_bytes((byte_pointer)s,strlen(s));`\n");
-
     const char *s = "abcdef";
+    printf("\n==============================================\n");
+    printf("Exercise 2.7: show bytes on string: %s \n\t`show_bytes((byte_pointer)s,strlen(s));`\n",s);
     show_bytes((byte_pointer)s,strlen(s));
+    printf("\nNow with strlen(s)+1:\n");
+    show_bytes((byte_pointer)s,strlen(s)+1);
     printf("\n");
 }
 
