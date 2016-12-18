@@ -99,13 +99,30 @@ void exercise2_15(){
     printf("%d %d", !(x-y) ,!(x-x));
 }
 
+/***********************************************************************
+Exercise 2.16
+*************************************************************************/
+void shift_test(unsigned char s){
+    printf("x:%2x\tx<<3: %2x;\tx>>2: %2x;\tx>>2:%x;\n",
+    s,(unsigned char)(s<<3),(unsigned char)(s>>2),(unsigned char )(((signed char)s)>>2));
+}
+
+void exercise2_16(){
+    printf("\n============================\nExercise2.16:\n");
+    shift_test(0xC3);
+    shift_test(0x75);
+    shift_test(0x87);
+    shift_test(0x66);
+}
+
+
+
+
 int main(){
     exercise2_11();
     exercise2_12();
     exercise2_13();
     exercise2_14();
     exercise2_15();
-
-    int x=10,y=20;
-    printf("x%" PRId32 ", y = %" PRIu64 "\n", x,y);
+    exercise2_16();
 }
