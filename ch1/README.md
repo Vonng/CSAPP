@@ -10,8 +10,8 @@
 
 * 预处理：gcc -E hello.c -o hello.i
 * 编译器：gcc -S hello.i -o hello.s
-    * 汇编器：gcc -c hello.s -o hello.o
-    * 链接器：gcc hello.o -o hello
+* 汇编器：gcc -c hello.s -o hello.o
+* 链接器：gcc hello.o -o hello
 
 ## 1.3 了解编译系统如何工作大有裨益
 * [Hello.c编译流程](./src/Makefile)
